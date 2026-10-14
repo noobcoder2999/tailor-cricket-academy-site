@@ -1,0 +1,53 @@
+.crease-experience { background: #091420; }
+.crease-experience .live-match-field { background: #091420; min-height: 660px; }
+.crease-experience .live-match-field .field-render { width: calc(100% - 332px); filter: none; }
+.crease-experience .live-match-field .technique-panel { right: 0; top: 92px; bottom: 45px; width: 332px; max-height: none; padding: 26px 22px; border: 0; border-left: 1px solid #ffffff20; border-radius: 0; background: #0e1d2c; box-shadow: none; backdrop-filter: none; }
+.crease-experience .live-match-field .technique-panel h2 { font: 600 30px/1.12 Arial, sans-serif; letter-spacing: -1px; }
+.crease-experience .live-match-field .technique-panel h2 em { font-family: Georgia, serif; font-weight: 400; color: #ebcb90; }
+.crease-experience .live-match-field .intro-top { padding: 18px 28px; background: #091420ed; border-bottom: 1px solid #ffffff20; }
+.crease-experience .live-match-field .technique-grid { grid-template-columns: 1fr; gap: 6px; }
+.crease-experience .live-match-field .technique-grid button { min-height: 53px; padding: 10px 14px; border-radius: 5px; background: #172a3c; border-color: #ffffff20; }
+.crease-experience .live-match-field .technique-grid button > span:last-child { font-size: 12px; }
+.crease-experience .live-match-field .technique-grid button:hover { color: #0b1c2a; background: #e4c68b; }
+.crease-experience .live-match-field .technique-grid button:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+.crease-experience .live-match-field .intro-subtitle { line-height: 1.7; color: #b4c3d2; }
+.crease-experience .live-match-field .experience-controls { margin-top: 16px; color: #b4c3d2; }
+.crease-experience .live-match-field .field-assumption { bottom: 47px; left: 28px; background: #091420db; font-size: 9px; }
+.crease-experience .live-match-field .field-legend-details { left: 28px; bottom: 95px; background: #091420ed; }
+.crease-experience .match-view-controls { top: 103px; left: 28px; }
+.crease-experience .match-view-controls button { border-radius: 4px; background: #0e1d2ce8; }
+.crease-experience .match-view-controls button[aria-pressed="true"] { background: #e4c68b; color: #10202e; }
+.crease-experience .match-broadcast { left: 28px; bottom: 155px; top: auto; background: #091420e8; border-left-color: #edc779; border-radius: 3px; padding: 12px 16px; }
+.crease-experience .match-broadcast small { color: #b4c3d2; font-size: 7px; }
+.crease-experience .live-match-field.field-playing .field-render { width: 100%; }
+.crease-experience .live-match-field.field-playing .technique-panel { width: 280px; right: 20px; top: auto; bottom: 55px; max-height: 310px; padding: 18px; background: #091420df; border: 1px solid #ffffff22; border-radius: 6px; }
+.crease-experience .live-match-field.field-playing .technique-panel h2 { font-size: 26px; }
+.crease-experience .live-match-field.field-playing .shot-cue { display: none; }
+.crease-experience .live-match-field.field-playing .field-assumption { display: none; }
+.crease-experience .live-match-field.field-playing .match-broadcast { bottom: 70px; }
+.crease-experience .live-match-field.field-playing .field-legend-details { display: none; }
+.crease-experience .intro-bottom { color: #c2cfdb; }
+.crease-experience .crease-outro { position: fixed; inset: 0; z-index: 4; background: #091420; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 18px; pointer-events: none; }
+.crease-experience .crease-outro span { font: 10px Arial, sans-serif; letter-spacing: 3px; color: #e6c488; }
+.crease-experience .crease-outro strong { font: 36px Georgia, serif; text-align: center; }
+@media (max-width: 850px) {
+  .crease-experience .live-match-field { min-height: 740px; }
+  .crease-experience .live-match-field .field-render { width: 100%; height: 55%; }
+  .crease-experience .live-match-field .technique-panel { left: 0; right: 0; top: 55%; bottom: 38px; width: 100%; padding: 18px; border-left: 0; border-top: 1px solid #ffffff26; max-height: none; }
+  .crease-experience .live-match-field .technique-grid { grid-template-columns: 1fr 1fr; }
+  .crease-experience .live-match-field .intro-top { padding: 12px 16px; }
+  .crease-experience .match-view-controls { left: 14px; top: 80px; gap: 5px; }
+  .crease-experience .match-view-controls button { min-height: 34px; padding: 6px 9px; font-size: 9px; }
+  .crease-experience .match-broadcast { left: 14px; bottom: 12px; top: auto; padding: 8px 10px; }
+  .crease-experience .match-broadcast strong { font-size: 8px; }
+  .crease-experience .match-broadcast small { font-size: 6px; }
+  .crease-experience .live-match-field .field-legend-details { display: none; }
+  .crease-experience .live-match-field .technique-panel h2 { font-size: 24px; }
+  .crease-experience .live-match-field .technique-panel h2 br { display: block; }
+  .crease-experience .live-match-field.field-playing .field-render { width: 100%; height: 73%; }
+  .crease-experience .live-match-field.field-playing .technique-panel { top: 73%; bottom: 30px; right: 0; left: 0; width: 100%; max-height: none; border-radius: 0; padding: 10px 16px; }
+  .crease-experience .live-match-field.field-playing .intro-back, .crease-experience .live-match-field.field-playing .eyebrow, .crease-experience .live-match-field.field-playing .experience-controls { display: none; }
+  .crease-experience .live-match-field.field-playing .match-broadcast { bottom: 12px; }
+  .crease-experience .live-match-field.field-playing .animation-status { margin: 8px 0; }
+  .crease-experience .live-match-field.field-playing progress { margin-bottom: 8px; }
+}

@@ -1,0 +1,170 @@
+.coach-scroll-site { position: relative; isolation: isolate; background: #17251d; }
+.coach-scroll-site > :not(.coach-scroll-backdrop) { position: relative; z-index: 1; }
+.coach-scroll-backdrop {
+  position: fixed; inset: 0; height: 100lvh; z-index: 0; overflow: hidden;
+  background: #17251d; pointer-events: none; perspective: 1200px; contain: layout paint;
+}
+.coach-ground-layer { position: absolute; inset: -4%; opacity: .6; }
+.coach-ground-layer img { object-fit: cover; object-position: 60% 55%; }
+.coach-ground-grade { position: absolute; inset: 0; background: linear-gradient(90deg, #101f18f5 0%, #16271ce0 28%, #1a2a2099 53%, #14251b4d 85%), linear-gradient(0deg, #101f18dd, transparent 70%); }
+.coach-subject { position: absolute; right: 7%; bottom: -4svh; height: 91svh; width: auto; transform-origin: 50% 75%; transform-style: preserve-3d; }
+.coach-subject img { display: block; width: auto; height: 100%; max-width: none; filter: drop-shadow(-25px 24px 25px #05130da8); }
+.coach-field-lines { position: absolute; width: 105%; height: 100%; left: -4%; top: 6%; opacity: .27; }
+.coach-field-lines svg { width: 100%; height: 100%; stroke: #d6d9b6; stroke-width: 1; }
+.coach-scene-vignette { position: absolute; inset: 0; background: linear-gradient(0deg, #102018f2, transparent 24%, transparent 85%, #13211966); }
+.coach-frame-corner { position: absolute; width: 20px; height: 20px; bottom: 27px; border-bottom: 1px solid #c0c7a953; }
+.coach-frame-left { left: 26px; border-left: 1px solid #c0c7a953; }
+.coach-frame-right { right: 26px; border-right: 1px solid #c0c7a953; }
+.coach-scene-ball { position: absolute; width: 31px; height: 31px; left: 52%; top: 70%; border-radius: 50%; background: radial-gradient(circle at 30% 20%, #df7550, #a83021 48%, #4c1714 95%); box-shadow: 8px 17px 20px #03120999; }
+.coach-scene-ball span { position: absolute; width: 70%; height: 100%; left: 6%; border-right: 2px dashed #eac69f; border-radius: 50%; transform: rotate(30deg); }
+.coach-scroll-backdrop[data-depth-mode="photograph"] .coach-ground-layer { opacity: .85; }
+.coach-scroll-backdrop[data-depth-mode="photograph"] .coach-ground-layer img { object-position: 70% center; }
+.coach-hero-sequence { color: #f4efdf; }
+.coach-chapter { min-height: 100svh; padding: 8svh 6%; position: relative; }
+.coach-opening { min-height: max(770px, calc(100svh - 90px)); padding-top: 26px; padding-bottom: 115px; }
+.coach-edition { display: flex; justify-content: space-between; gap: 24px; font: 9px/1.7 "Courier New", monospace; letter-spacing: 1.8px; color: #cbd3be; }
+.coach-edition > span:first-child { display: flex; align-items: center; gap: 11px; }
+.coach-edition i { display: inline-block; width: 6px; height: 6px; background: #ff9256; border-radius: 50%; }
+.coach-wordmark { font-size: clamp(98px, 13.8vw, 228px); letter-spacing: -.085em; font-weight: 800; line-height: .95; margin: 16px 0 44px -8px; width: fit-content; }
+.coach-wordmark-dot { color: #ff9256; }
+.coach-opening-copy { max-width: 660px; }
+.coach-opening-copy .eyebrow { color: #dbb78d; margin-bottom: 18px; font-size: 9px; }
+.coach-opening h2 { font-size: clamp(45px, 5.5vw, 79px); line-height: 1.02; letter-spacing: -.06em; margin: 0 0 23px; }
+.coach-hero-sequence h2 em, .coach-interlude h2 em { color: #ffad7a; font-family: Georgia, "Times New Roman", serif; font-weight: 400; font-style: italic; letter-spacing: -.065em; }
+.coach-opening-copy > p:not(.eyebrow) { font-size: 13px; line-height: 1.9; color: #d6ddcf; margin: 0; max-width: 390px; }
+.coach-hero-sequence .button-row { gap: 28px; margin-top: 30px; }
+.coach-text-link { display: inline-flex; min-height: 44px; align-items: center; gap: 20px; font-size: 12px; color: inherit; border-bottom: 1px solid #c5cfb963; }
+.coach-text-link:hover { color: #ffad7a; }
+.coach-photo-tag { position: absolute; right: 6%; bottom: 200px; padding: 16px 20px; background: #14251bc9; border-left: 2px solid #ff9256; backdrop-filter: blur(12px); font: 9px/1.7 "Courier New", monospace; letter-spacing: 1.5px; }
+.coach-photo-tag small { display: block; font-size: 7px; margin-top: 5px; letter-spacing: 1px; color: #ced7c5; }
+.coach-live-dot { display: inline-block; width: 5px; height: 5px; border-radius: 50%; margin-right: 7px; background: #ff9256; }
+.coach-photo-controls { display: flex; align-items: center; gap: 15px; position: absolute; right: 6%; top: 70px; }
+.coach-photo-controls .motion-toggle { font-size: 10px; color: #f4efdf; text-shadow: 0 1px 6px #102018; }
+.coach-opening-bottom { position: absolute; left: 6%; right: 6%; bottom: 78px; border-top: 1px solid #dde2c92e; display: flex; align-items: center; gap: 25px; justify-content: space-between; padding-top: 18px; font: 9px/1.5 "Courier New", monospace; letter-spacing: 1px; }
+.coach-scroll-cue { display: inline-flex; gap: 12px; align-items: center; min-height: 44px; }
+.coach-scroll-cue > span { width: 31px; height: 44px; display: grid; place-items: center; border: 1px solid #c5cfb95c; border-radius: 25px; font-size: 19px; }
+.coach-opening-bottom > div { display: flex; align-items: center; gap: 26px; }
+.coach-opening-bottom > div a, .coach-opening-bottom .text-link { font-size: 10px; min-height: 44px; display: inline-flex; align-items: center; color: #f4efdf; border: 0; }
+.coach-chapter-count { font-size: 18px; letter-spacing: -1px; }
+.coach-chapter-count i { font-size: 10px; font-style: normal; color: #b3c2ab; margin-left: 5px; }
+.coach-approach { display: flex; align-items: center; min-height: 95svh; }
+.coach-story-copy { max-width: 590px; }
+.coach-story-copy .eyebrow { color: #d8c49e; margin-bottom: 30px; }
+.coach-story-copy .eyebrow > span { font-size: 16px; color: #ffad7a; margin-right: 12px; }
+.coach-story-copy h2 { font-size: clamp(42px, 6vw, 87px); letter-spacing: -.06em; line-height: 1.05; margin-bottom: 29px; }
+.coach-story-copy > p:not(.eyebrow) { font-size: 16px; line-height: 1.9; max-width: 375px; color: #dce2d5; }
+.coach-session-notes { display: flex; flex-direction: column; gap: 16px; border-left: 1px solid #f4efdf38; padding-left: 23px; margin-top: 38px; font: 9px/1.6 "Courier New", monospace; letter-spacing: 1px; color: #cbd6bf; }
+.coach-margin-note { position: absolute; writing-mode: vertical-rl; right: 3%; top: 38%; font: 9px "Courier New", monospace; letter-spacing: 3px; color: #e9e6d5; }
+.coach-invitation { min-height: 110svh; padding-top: 16svh; padding-bottom: 100px; }
+.coach-invitation .coach-story-copy { max-width: 720px; }
+.coach-invitation h2 { font-size: clamp(42px, 5.7vw, 82px); }
+.coach-ground-card { position: relative; width: 285px; padding: 10px; margin-top: 40px; background: #eee9d7; border-radius: 4px; color: #28392a; transform: rotate(-3deg); }
+.coach-ground-card:hover, .coach-ground-card:focus-within { transform: none; }
+.coach-ground-card-image { position: relative; height: 150px; }
+.coach-ground-card .hero-photo { position: absolute; inset: 0; width: auto; height: auto; }
+.coach-ground-card .hero-image { object-fit: cover; }
+.coach-ground-card .hero-credit { left: 5px; right: 5px; bottom: 5px; text-align: left; max-width: none; font-size: 8px; line-height: 1.4; }
+.coach-ground-card .hero-photo-tools { position: relative; top: 8px; left: 8px; right: auto; bottom: auto; width: calc(100% - 16px); display: flex; flex-wrap: wrap; gap: 5px; }
+.coach-ground-card .hero-photo-tools:empty { display: none; }
+.coach-ground-card .hero-photo-tools > div { display: flex; overflow-x: auto; max-width: 100%; gap: 4px; flex: 1 0 100%; }
+.coach-ground-card .hero-photo-tools > div button { flex-shrink: 0; min-height: 36px; min-width: 36px; padding: 5px; }
+.coach-ground-card .media-edit-button { min-height: 44px; padding: 8px 11px; font-size: 10px; }
+.coach-ground-caption { display: flex; flex-direction: column; gap: 7px; padding: 12px 5px 4px; font: 8px/1.7 "Courier New", monospace; letter-spacing: 1px; }
+.coach-ground-caption a { font: 11px/1.5 Arial, sans-serif; text-decoration: underline; text-underline-offset: 4px; min-height: 28px; }
+.coach-scene-credit { font-size: 9px; line-height: 1.8; color: #bccbb5; max-width: 460px; margin: 26px 0 0; }
+.coach-scroll-site > .section { background: #f4efdfed; }
+.coach-scroll-site > .section-sand, .coach-scroll-site > .team-section { background: #e6e7d7f0; }
+.coach-scroll-site > .coach-section, .coach-scroll-site > .facilities-section { background: #1d3327cf; }
+.coach-scroll-site > .achievements-section, .coach-scroll-site > .trial-section { background: #d7dfbfee; }
+.coach-scroll-site > .concept-notice { background: #f4efdf; }
+.coach-scroll-site > .coach-section::before { opacity: .3; }
+.coach-interlude { min-height: 78svh; padding: 18svh 6%; color: #f4efdf; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; }
+.coach-interlude .eyebrow { color: #d8c49e; }
+.coach-interlude h2 { font-size: clamp(50px, 6.7vw, 96px); line-height: 1.02; margin: 0 0 25px; }
+body:has(.coach-scroll-site) .site-header { background: #13241bf5; border-color: #e0e5cd24; }
+body:has(.coach-scroll-site) .site-footer { position: relative; z-index: 1; }
+.coach-scroll-site:focus { outline: none; }
+
+@media (min-width: 1700px) {
+  .coach-subject { right: 11%; }
+  .coach-opening-copy { max-width: 760px; }
+}
+@media (max-width: 1100px) {
+  .coach-subject { right: -2%; height: 83svh; bottom: 0; }
+  .coach-opening-copy { max-width: 570px; }
+  .coach-wordmark { font-size: 13.8vw; }
+  .coach-opening h2 { font-size: 64px; }
+  .coach-photo-controls { top: 62px; }
+  .coach-photo-tag { bottom: 160px; right: 4%; }
+  .coach-story-copy { max-width: 53%; }
+  .coach-story-copy h2 { font-size: 57px; }
+  .coach-invitation .coach-story-copy { max-width: 70%; }
+}
+@media (max-width: 760px) {
+  .coach-ground-grade { background: linear-gradient(90deg, #102018e8, #14291d99 70%), linear-gradient(0deg, #101f18ef, transparent 80%); }
+  .coach-subject { right: -13%; height: 76svh; bottom: 2svh; opacity: .85; }
+  .coach-opening { min-height: 940px; padding-top: 24px; }
+  .coach-edition { font-size: 8px; letter-spacing: 1px; }
+  .coach-edition > span:last-child { display: none; }
+  .coach-wordmark { font-size: 23vw; margin-left: -3px; margin-top: 24px; }
+  .coach-opening-copy { max-width: 78%; margin-top: 215px; }
+  .coach-opening h2 { font-size: clamp(42px, 7.8vw, 60px); }
+  .coach-opening-copy > p:not(.eyebrow) { font-size: 12px; max-width: 280px; }
+  .coach-photo-controls { top: 190px; left: 6%; right: auto; flex-direction: column; align-items: flex-start; gap: 3px; }
+  .coach-photo-tag { top: 267px; bottom: auto; left: 6%; right: auto; max-width: 175px; font-size: 7px; padding: 12px 14px; }
+  .coach-photo-tag small { font-size: 6px; letter-spacing: .5px; }
+  .coach-hero-sequence .button-row { gap: 15px; flex-wrap: wrap; }
+  .coach-opening-bottom { flex-wrap: wrap; bottom: 34px; gap: 10px; }
+  .coach-opening-bottom > div { order: 3; width: 100%; justify-content: space-between; gap: 10px; }
+  .coach-chapter-count { margin-left: auto; }
+  .coach-story-copy, .coach-invitation .coach-story-copy { max-width: 88%; }
+  .coach-story-copy h2 { font-size: clamp(42px, 8.5vw, 64px); }
+  .coach-story-copy > p:not(.eyebrow) { font-size: 14px; max-width: 330px; }
+  .coach-approach { min-height: 95svh; }
+  .coach-invitation { min-height: auto; padding-top: 13svh; padding-bottom: 75px; }
+  .coach-invitation h2 { font-size: clamp(41px, 8vw, 60px); }
+  .coach-interlude { min-height: 70svh; }
+  .coach-interlude h2 { font-size: clamp(45px, 9vw, 66px); }
+}
+@media (max-width: 450px) {
+  .coach-subject { right: -30%; height: 70svh; bottom: 5svh; opacity: .78; }
+  .coach-scene-vignette { background: linear-gradient(0deg, #102018 2%, #10201866 30%, transparent 70%); }
+  .coach-ground-grade { background: linear-gradient(90deg, #102018ed, #14251b96); }
+  .coach-opening { min-height: 980px; }
+  .coach-wordmark { margin-top: 27px; margin-bottom: 0; font-size: 23.5vw; }
+  .coach-opening-copy { max-width: 100%; margin-top: 245px; }
+  .coach-opening h2 { font-size: 48px; max-width: 310px; }
+  .coach-opening-copy .eyebrow { font-size: 8px; }
+  .coach-photo-controls { top: 164px; }
+  .coach-photo-tag { top: 287px; left: 6%; }
+  .coach-hero-sequence .button { min-height: 48px; padding: 12px 18px; font-size: 11px; gap: 15px; }
+  .coach-text-link { font-size: 11px; gap: 10px; }
+  .coach-opening-bottom { font-size: 8px; bottom: 26px; }
+  .coach-hero-sequence .button-row { gap: 14px; }
+  .coach-story-copy, .coach-invitation .coach-story-copy { max-width: 100%; }
+  .coach-story-copy h2 { font-size: 46px; }
+  .coach-story-copy > p:not(.eyebrow) { max-width: 275px; }
+  .coach-margin-note { display: none; }
+  .coach-ground-card { width: min(285px, 100%); }
+  .coach-session-notes { font-size: 8px; }
+  .coach-field-lines { width: 180%; left: -40%; }
+}
+@media (max-width: 360px) {
+  .coach-opening h2 { font-size: 42px; }
+  .coach-opening { min-height: 990px; }
+  .coach-photo-tag { max-width: 150px; }
+  .coach-opening-copy { margin-top: 260px; }
+  .coach-story-copy h2 { font-size: 40px; }
+  .coach-subject { right: -40%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .coach-ground-layer, .coach-subject, .coach-field-lines, .coach-scene-ball { transform: none !important; }
+  .coach-ground-card { transform: none; }
+  .coach-chapter { min-height: auto; }
+  .coach-opening { min-height: 770px; }
+  .coach-approach { padding-top: 80px; padding-bottom: 80px; }
+  .coach-invitation { padding-top: 60px; }
+}
+@media (max-width: 760px) and (prefers-reduced-motion: reduce) {
+  .coach-opening { min-height: 980px; }
+}

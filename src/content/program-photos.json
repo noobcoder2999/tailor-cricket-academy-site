@@ -1,0 +1,90 @@
+{
+  "youth-practice": {
+    "src": "/images/programs/youth-practice.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Cricket_practice_at_Ardingly_College.jpg",
+    "author": "Ghleisnap",
+    "license": "CC0 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "description": "Boys practicing cricket at Ardingly College, West Sussex. Godwin House (left) and the Old Ardinian Building (right) can be seen."
+  },
+  "club-practice": {
+    "src": "/images/programs/club-practice.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Benalla_Distric_Cricket_players_practise.jpg",
+    "author": "Gibrate1",
+    "license": "CC0 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "description": "Benalla District Cricket players practicing on grounds overlooking the Benalla Rotary Club."
+  },
+  "training": {
+    "src": "/images/programs/training.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Cricket_training.jpg",
+    "author": "ArmieVas",
+    "license": "CC0 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "description": "Cricketers hailing from Indian state of Kerala based in Qatar looking forward to be part of the Qatar Deaf and Dumb cricket team."
+  },
+  "indoor": {
+    "src": "/images/programs/indoor.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Indoor_cricket.jpg",
+    "author": "Cricnets",
+    "license": "CC0 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "description": "batsman batting"
+  },
+  "women-2716": {
+    "src": "/images/programs/women-2716.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:2017_Women%27s_Cricket_World_Cup_IMG_2716_(36007539511).jpg",
+    "author": "Robert Drummond",
+    "license": "CC0 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "description": "IMG_2716"
+  },
+  "women-2659": {
+    "src": "/images/programs/women-2659.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:2017_Women%27s_Cricket_World_Cup_IMG_2659_(35334411983).jpg",
+    "author": "Robert Drummond",
+    "license": "CC0 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "description": "IMG_2659"
+  },
+  "women-2785": {
+    "src": "/images/programs/women-2785.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:2017_Women%27s_Cricket_World_Cup_IMG_2785_(36141626785).jpg",
+    "author": "Robert Drummond",
+    "license": "CC0 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "description": "IMG_2785"
+  },
+  "women-2796": {
+    "src": "/images/programs/women-2796.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:2017_Women%27s_Cricket_World_Cup_IMG_2796_(36141617645).jpg",
+    "author": "Robert Drummond",
+    "license": "CC0 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "description": "IMG_2796"
+  },
+  "women-2824": {
+    "src": "/images/programs/women-2824.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:2017_Women%27s_Cricket_World_Cup_IMG_2824_(36007464891).jpg",
+    "author": "Robert Drummond",
+    "license": "CC0 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "description": "IMG_2824"
+  },
+  "women-2856": {
+    "src": "/images/programs/women-2856.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:2017_Women%27s_Cricket_World_Cup_IMG_2856_(35334236333).jpg",
+    "author": "Robert Drummond",
+    "license": "CC0 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "description": "IMG_2856"
+  },
+  "women-2910": {
+    "src": "/images/programs/women-2910.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:2017_Women%27s_Cricket_World_Cup_IMG_2910_(35973014782).jpg",
+    "author": "Robert Drummond",
+    "license": "CC0 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "description": "IMG_2910"
+  }
+}

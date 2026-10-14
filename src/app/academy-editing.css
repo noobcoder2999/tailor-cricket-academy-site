@@ -1,0 +1,18 @@
+.menu-links button { display: flex; justify-content: space-between; padding: 16px 0; border-bottom: 1px solid var(--line); font: 22px Georgia, serif; color: inherit; background: transparent; text-align: left; }
+.academy-contact a { display: block; overflow-wrap: anywhere; }
+.academy-contact p, .contact-details p { white-space: pre-line; overflow-wrap: anywhere; }
+.footer-top .academy-contact { font-size: 12px; }
+.program-photo-credit { padding: 8px 20px; margin: 0; font-size: 10px; line-height: 1.5; color: var(--muted); border-bottom: 1px solid var(--line); }
+.program-photo-credit a { text-decoration: underline; text-underline-offset: 2px; }
+.facility-photo { position: relative; aspect-ratio: 4 / 3; overflow: hidden; border-radius: 10px; margin-bottom: 18px; border: 1px solid #ffffff30; }
+.facility-photo-empty { background: linear-gradient(145deg, #284c3b, #142b22); }
+.facility-photo-empty > div { display: grid; place-content: center; height: 100%; text-align: center; padding: 15px 15px 40px; }
+.facility-photo-empty span { font: 36px Georgia, serif; color: var(--gold); }
+.facility-photo-empty p { color: var(--cream); margin: 5px 0; font-weight: bold; }
+.facility-photo-empty small, .facility-grid .facility-credit { color: #c2cabb; font-size: 10px; }
+.facility-grid article { min-width: 0; }
+.dialog .enquiry-form { margin-top: 18px; }
+@media (max-width: 650px) {
+  .dialog .enquiry-form { grid-template-columns: 1fr; }
+  .dialog-inner { padding: 20px; }
+}
