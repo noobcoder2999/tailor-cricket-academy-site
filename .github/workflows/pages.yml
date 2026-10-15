@@ -1,7 +1,5 @@
 name: Deploy public website
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -28,6 +26,7 @@ jobs:
         with:
           path: out
   deploy:
+    if: github.event_name == 'workflow_dispatch' && vars.ENABLE_PUBLIC_PAGES == 'true'
     needs: build
     runs-on: ubuntu-latest
     permissions:

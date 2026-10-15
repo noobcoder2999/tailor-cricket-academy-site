@@ -50,6 +50,18 @@ try {
   await page.waitForSelector('.coach-scroll-backdrop[data-scroll-ready="true"]');
   assert.match(await page.title(), /Tailor Cricket Academy/);
   assert.equal(await page.locator(".media-edit-button, .media-admin-bar, form").count(), 0);
+  const approved = JSON.parse(await readFile(path.resolve(import.meta.dirname, "..", "src", "content", "published-media.json"), "utf8"));
+  for (const photo of approved.photos.filter(photo => photo.target === "coach")) {
+    const profile = page.locator("#coaches article").filter({ has: page.getByRole("heading", { name: photo.name, exact: true }) }).filter({ hasText: photo.role });
+    assert.equal(await profile.locator(".image-pill").count(), 0);
+    assert.ok((await profile.locator("img").getAttribute("src")).endsWith(photo.src.replace("/uploads/", "/owner-media/")));
+  }
+  await page.getByRole("button", { name: "Open contact details and book a trial" }).click();
+  if (approved.contact?.phone) await page.getByRole("dialog").getByRole("link", { name: approved.contact.phone, exact: true }).waitFor();
+  if (approved.contact?.email) await page.getByRole("dialog").getByRole("link", { name: approved.contact.email, exact: true }).waitFor();
+  await page.keyboard.press("Escape");
+  assert.equal(await page.locator(".real-cricket-ball").count(), 2);
+  assert.equal(await page.locator(".contact-ball .cricket-stitch-row").count(), 6);
   const coach = page.locator(".coach-subject");
   await coach.locator("img").evaluate(image => image.decode());
   const before = await coach.getAttribute("style");
@@ -88,6 +100,9 @@ try {
   assert.ok(links.every(link => link.startsWith(`${basePath}/`)), JSON.stringify(links));
   for (const file of ["images/coach-depth.webp", "images/coach-ground.webp", "models/crease-player.glb", "models/cricketer.glb", "media/cricket-sample.vtt", "Tailor-Cricket-Academy.md"]) {
     assert.equal((await page.request.get(`${url}${file}`)).status(), 200, file);
+  }
+  for (const photo of approved.photos) {
+    assert.equal((await page.request.get(`${url}${photo.src.replace("/uploads/", "owner-media/")}`)).status(), 200);
   }
   await page.emulateMedia({ reducedMotion: "reduce" });
   await page.waitForFunction(() => getComputedStyle(document.querySelector(".coach-subject")).transform === "none");

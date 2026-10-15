@@ -5,6 +5,7 @@ import { motion, useMotionValue, useTransform } from "framer-motion";
 import { usePageMotion } from "./PageMotion";
 import { useSiteMedia } from "./MediaEditing";
 import { sitePath } from "../lib/site";
+import CricketBall from "./CricketBall";
 
 export default function CoachScrollBackdrop() {
   const { enabled, reduced } = usePageMotion();
@@ -55,7 +56,7 @@ export default function CoachScrollBackdrop() {
     {!replacement && <motion.div className="coach-subject" style={{ x: coachX, y: coachY, scale: coachScale, rotateY: coachRotation }}>
       <Image src={sitePath("/images/coach-depth.webp")} alt="" width={354} height={530} unoptimized loading="eager" fetchPriority="high" />
     </motion.div>}
-    <motion.div className="coach-scene-ball" style={{ x: ballX, y: ballY, rotate: fieldRotation }}><span /></motion.div>
+    <motion.div className="coach-scene-ball" style={{ x: ballX, y: ballY, rotate: fieldRotation }}><CricketBall /></motion.div>
     <div className="coach-scene-vignette" />
     <div className="coach-frame-corner coach-frame-left" /><div className="coach-frame-corner coach-frame-right" />
   </div>;

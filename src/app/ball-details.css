@@ -1,0 +1,9 @@
+.real-cricket-ball { display: block; width: 100%; height: 100%; }
+.contact-ball { background: transparent; box-shadow: 0 7px 18px #10231955; }
+.contact-ball > .real-cricket-ball { position: absolute; inset: 0; }
+.contact-ball > span:last-child { margin-left: 9px; letter-spacing: .5px; text-shadow: 0 1px 2px #260706; }
+.coach-scene-ball { background: transparent; }
+.photo-credit-link { font: 10px/1.6 Arial, sans-serif; text-decoration: underline; text-underline-offset: 3px; }
+.photo-credit-link:hover { text-decoration-thickness: 2px; }
+.hero-credit .photo-credit-link { color: #fff7e2; font-size: 9px; }
+.program-photo-credit { padding: 5px 20px; }

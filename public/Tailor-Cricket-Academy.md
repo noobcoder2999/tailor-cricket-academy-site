@@ -1,6 +1,6 @@
 # Tailor Cricket Academy - public scroll edition
 
-**Website:** https://noobcoder2999.github.io/tailor-cricket-academy-site/
+**Status:** private repository; GitHub Pages is disabled. Do not re-enable publication without the owner's explicit approval.
 
 This is the read-only GitHub Pages edition of the Tailor Cricket Academy concept website. It retains the coach-photo scroll scene, responsive design, motion controls, programmes, galleries, licensed video, the cricket introduction and batting simulator.
 
@@ -8,8 +8,8 @@ This is the read-only GitHub Pages edition of the Tailor Cricket Academy concept
 
 - No enquiry collection, bookings, payments, photo uploads or admin editing.
 - Enquiry buttons explain that this is a preview; they do not request personal data or issue fake receipts.
-- No local media catalogue, private contact settings, enquiry records, secrets, saved versions or dependencies are published.
-- The owner-approved coach-scene photograph and licensed sample assets are included. The separate laptop application and private documentation repository are unchanged.
+- Approved display photographs, actual coach profiles, logo and academy contact details are included in `src/content/published-media.json` and `public/owner-media`. No saved enquiries, credentials, environment secrets or unrelated private files are copied.
+- The owner-approved coach-scene photograph and licensed sample assets are included. The separate laptop application and private documentation repository remain intact.
 - Sample coaches, testimonials, results, amenities and schedules remain clearly illustrative. This is not a claim that a live academy is accepting bookings.
 
 GitHub Pages serves static files and cannot run the original Node API. Editing and local storage remain in the owner's separate application.
@@ -33,7 +33,7 @@ npm run build
 
 After building, `npm run test:pages` checks the real static files in a browser. Install Playwright Chromium with `npx playwright install chromium` if it is not already available. Set `PAGES_TEST_CHANNEL=msedge` to use an installed Edge browser, or `PAGES_TEST_URL` to check the deployed site instead of the local export.
 
-The production build creates `out/`. The GitHub Actions workflow deploys it on pushes to `main`. The project path is set in `src/lib/site.ts` and used by `next.config.ts`. `sitePath` and the small `SiteLink` component apply it to assets and navigation. The public edition uses ordinary document links, avoiding server-router prefetch assumptions on a static host; same-page section links still scroll normally.
+The production build creates `out/`. The Pages workflow is manually disabled and no longer runs on pushes; a deployment also requires an explicit `ENABLE_PUBLIC_PAGES=true` repository variable. The project path is set in `src/lib/site.ts` and used by `next.config.ts`. `sitePath` and `SiteLink` apply it to assets and navigation. This edition uses ordinary document links so static-host navigation has no server-router dependency.
 
 ## Design and motion
 
@@ -56,6 +56,10 @@ The separately selectable cricket introduction and batting lab use procedural, g
 - `src/app/privacy/`, `terms/`, `credits/`: public-specific notices and attribution.
 
 ## Media and permissions
+
+The Head Coach/Bowling Coach profiles and academy contact fields are drawn from the owner's approved display snapshot, not an empty catalogue. Photo captions use compact **Photo credits** links; actual photographer credits remain on `/credits`. Owner approval and credit text do not override a photographer's rights. No enquiry records are included.
+
+The About copy attributes RCA affiliation and hosted RCA matches to the academy owner; an independent affiliation record was not available during research.
 
 The coach photograph was provided and approved for this publication by the owner. It and its derived cutout/background are **not CC0** and are not offered under an open redistribution license.
 

@@ -1,0 +1,78 @@
+{
+  "revision": "5a57b466-8b5a-4700-ba43-1b5b66f2ea16",
+  "photos": [
+    {
+      "id": "745ad6f6-653a-44cb-b307-d2dfdb841587",
+      "target": "coach",
+      "name": "Tarun Tailor",
+      "role": "Head Coach",
+      "caption": "Tarun Tailor is owner and head coach for Tailor cricket academy.",
+      "alt": "Coach appearance",
+      "credit": "self",
+      "profileId": "arun",
+      "permission": true,
+      "revision": "6c92803f-7e03-43f3-b09f-77c49e4de4a0",
+      "src": "/uploads/141419ab-8eb0-47a3-a116-8d4478c7741a.webp",
+      "width": 1080,
+      "height": 1062,
+      "createdAt": "2026-10-01T10:33:51.524Z"
+    },
+    {
+      "id": "a6e172da-9cb2-4e28-9b04-092869197d03",
+      "target": "moment",
+      "name": "caoch with players",
+      "role": "IPL jersey",
+      "caption": "with vital kohlu",
+      "alt": "no dreams are shorted",
+      "credit": "self",
+      "profileId": "",
+      "permission": true,
+      "revision": "75a75642-d046-485a-bb1b-b774f54ecd92",
+      "src": "/uploads/a6e172da-9cb2-4e28-9b04-092869197d03.webp",
+      "width": 886,
+      "height": 1920,
+      "createdAt": "2026-10-01T10:37:49.698Z"
+    },
+    {
+      "id": "26d0e6c6-96d2-4574-958f-2ac334478a60",
+      "target": "coach",
+      "name": "Tarun tailor",
+      "role": "Bowling Coach",
+      "caption": "he knows the ball very well",
+      "alt": "throwing ball to sanju samson",
+      "credit": "selfed",
+      "profileId": "sara",
+      "permission": true,
+      "revision": "3ef602fb-8243-4547-bb16-50318f1bff82",
+      "src": "/uploads/26d0e6c6-96d2-4574-958f-2ac334478a60.webp",
+      "width": 1080,
+      "height": 808,
+      "createdAt": "2026-10-01T14:52:58.232Z"
+    },
+    {
+      "id": "0ecff53c-c545-4dfb-9c99-b059fea1006b",
+      "target": "site",
+      "slotId": "brand-logo",
+      "name": "Tailor Cricket Academy",
+      "role": "Main Logo",
+      "caption": "Branding logo of academy",
+      "alt": "Self proclaimed",
+      "credit": "Self",
+      "profileId": "",
+      "permission": true,
+      "revision": "250a5ddd-789f-4a93-a95b-3b325e0d4d25",
+      "src": "/uploads/0ecff53c-c545-4dfb-9c99-b059fea1006b.webp",
+      "width": 219,
+      "height": 215,
+      "createdAt": "2026-10-12T09:02:36.276Z"
+    }
+  ],
+  "videos": [],
+  "contact": {
+    "phone": "7665909360",
+    "email": "taruntailor2596@gmail.com",
+    "address": "Tailor Cricket Academy, Jotdiwala, Saganer, Jaipur",
+    "hours": "Sample timetable: Mon-Fri 6-9am & 4-7pm; Sat-Sun 7-11am",
+    "whatsapp": "https://wa.me/917665909360"
+  }
+}

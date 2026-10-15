@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { facilities } from "../content/academy";
 import { EditPhotoButton, useSiteMedia } from "./MediaEditing";
+import CreditLink from "./CreditLink";
 
 export default function Facilities() {
   const { media, editing } = useSiteMedia();
@@ -16,7 +17,7 @@ export default function Facilities() {
       </div>
       <span className="facility-index">{String(index + 1).padStart(2, "0")}</span>
       <h3>{facility.title}</h3><p>{facility.description}</p>
-      {photo && <p className="facility-credit">{photo.caption} · Photo: {photo.credit}</p>}
+      {photo && <p className="facility-credit"><CreditLink photoId={photo.id} /></p>}
     </article>;
   })}</div>;
 }

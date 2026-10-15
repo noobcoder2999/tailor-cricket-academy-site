@@ -4,6 +4,7 @@ import type { PhotoRecord } from "../lib/media-schema";
 import { SectionHeading } from "./ui";
 import { EditPhotoButton } from "./MediaEditing";
 import { MotionToggle, ProfileCard } from "./PageMotion";
+import CreditLink from "./CreditLink";
 
 export default function Coaches({ photos }: { photos: PhotoRecord[] }) {
   const profiles = coaches.map(coach => {
@@ -12,13 +13,12 @@ export default function Coaches({ photos }: { photos: PhotoRecord[] }) {
   });
   return <section id="coaches" className="section coach-section"><div className="profile-section-top"><SectionHeading eyebrow="02 / IN YOUR CORNER" title={<>Good players.<br /><em>Great people.</em></>} text="A little belief. A different perspective. The right person in your corner. Get to know the people behind your next breakthrough." /><MotionToggle /></div>
     <div className="coach-grid">{profiles.map((coach, index) => <ProfileCard className={`coach-card ${coach.ownerPhoto ? "owner-coach" : ""}`} index={index} key={coach.id}>
-      <div className="coach-photo"><Image src={coach.photo} alt={coach.ownerPhoto?.alt ?? `Illustration placeholder for ${coach.name}; not a photograph`} fill unoptimized={Boolean(coach.ownerPhoto)} sizes="(max-width: 650px) 100vw, 33vw" /><span className="profile-number" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span><span className="image-pill">{coach.ownerPhoto ? "OWNER-SUPPLIED PROFILE" : "SAMPLE IDENTITY"}</span><EditPhotoButton label={coach.name} target="coach" profileId={coach.id} photoId={coach.ownerPhoto?.id} className="media-edit-overlay" /></div>
+      <div className="coach-photo"><Image src={coach.photo} alt={coach.ownerPhoto?.alt ?? `Illustration placeholder for ${coach.name}; not a photograph`} fill unoptimized={Boolean(coach.ownerPhoto)} sizes="(max-width: 650px) 100vw, 33vw" /><span className="profile-number" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>{!coach.ownerPhoto && <span className="image-pill">SAMPLE PROFILE</span>}<EditPhotoButton label={coach.name} target="coach" profileId={coach.id} photoId={coach.ownerPhoto?.id} className="media-edit-overlay" /></div>
       <div className="profile-copy">
       <p className="eyebrow">{coach.role}</p><h3>{coach.name}</h3><p>{coach.ownerPhoto ? coach.ownerPhoto.caption : coach.specialization}</p>
-      <details><summary>Meet the coach <span aria-hidden="true">+</span></summary><p>{coach.bio}</p>{coach.ownerPhoto ? <p className="sample-note">Photo: {coach.ownerPhoto.credit}. Experience and qualifications must be supplied and verified by the owner.</p> : <><p>{coach.experience}</p><p>{coach.qualifications}</p></>}{coach.contact ? <a href={coach.contact}>Contact coach ↗</a> : <p className="sample-note">Coach contact is not configured.</p>}</details>
+      <details><summary>Meet the coach <span aria-hidden="true">+</span></summary><p>{coach.bio}</p>{!coach.ownerPhoto && <><p>{coach.experience}</p><p>{coach.qualifications}</p></>}<CreditLink photoId={coach.ownerPhoto?.id} />{coach.contact && <a href={coach.contact}>Contact coach ↗</a>}</details>
       </div>
     </ProfileCard>)}
-    {photos.filter(photo => photo.profileId === "new").map((photo, index) => <ProfileCard className="coach-card owner-coach" index={index + profiles.length} key={photo.id}><div className="coach-photo"><Image src={photo.src} alt={photo.alt} fill unoptimized sizes="(max-width:650px) 100vw, 33vw" /><span className="profile-number" aria-hidden="true">{String(index + profiles.length + 1).padStart(2, "0")}</span><EditPhotoButton label={photo.name} target="coach" photoId={photo.id} className="media-edit-overlay" /></div><div className="profile-copy"><p className="eyebrow">{photo.role || "Coach"}</p><h3>{photo.name}</h3><p>{photo.caption}</p><p className="sample-note">Owner-supplied profile · Photo: {photo.credit}</p></div></ProfileCard>)}</div><EditPhotoButton target="coach" profileId="new" label="Add coach photo" />
-    <p className="coach-disclaimer">Uploaded profiles use owner-supplied identities. Remaining sample profiles are fictional, not verified academy appointments.</p>
+    {photos.filter(photo => photo.profileId === "new").map((photo, index) => <ProfileCard className="coach-card owner-coach" index={index + profiles.length} key={photo.id}><div className="coach-photo"><Image src={photo.src} alt={photo.alt} fill unoptimized sizes="(max-width:650px) 100vw, 33vw" /><span className="profile-number" aria-hidden="true">{String(index + profiles.length + 1).padStart(2, "0")}</span><EditPhotoButton label={photo.name} target="coach" photoId={photo.id} className="media-edit-overlay" /></div><div className="profile-copy"><p className="eyebrow">{photo.role || "Coach"}</p><h3>{photo.name}</h3><p>{photo.caption}</p><CreditLink photoId={photo.id} /></div></ProfileCard>)}</div><EditPhotoButton target="coach" profileId="new" label="Add coach photo" />
   </section>;
 }
