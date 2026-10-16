@@ -6,6 +6,7 @@ import "./academy-editing.css";
 import "./coach-scroll.css";
 import "./public-preview.css";
 import "./ball-details.css";
+import "./journal.css";
 import ContactBall from "../components/ContactBall";
 import { siteUrl, sitePath } from "../lib/site";
 import { publicMedia } from "../lib/public-media";
@@ -15,11 +16,11 @@ import EnquiryDialog from "../components/EnquiryDialog";
 
 export const metadata: Metadata = {
   metadataBase: siteUrl ? new URL(siteUrl) : undefined,
-  title: { default: `${academy.name} | Find your game`, template: `%s | ${academy.name}` },
-  description: academy.description,
+  title: { default: academy.searchTitle, template: `%s | ${academy.name}` },
+  description: academy.searchDescription,
   icons: { icon: images.crest },
-  robots: { index: false, follow: false },
-  openGraph: { title: academy.name, description: "An independent cricket academy website concept. Develop your game, from first steps to performance.", type: "website", ...(siteUrl ? { url: siteUrl } : {}) }
+  robots: { index: true, follow: true },
+  openGraph: { title: academy.searchTitle, description: academy.searchDescription, type: "website", locale: "en_IN", ...(siteUrl ? { url: siteUrl } : {}) }
 };
 export const viewport: Viewport = { width: "device-width", initialScale: 1, themeColor: "#25382b" };
 export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

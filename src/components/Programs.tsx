@@ -17,6 +17,6 @@ export default function Programs() {
       <p className="program-photo-credit"><PhotoCredit slotId={`program:${program.id}`} fallback={<><a href={photo.source} target="_blank" rel="noopener noreferrer">{photo.author}</a> · <a href={photo.licenseUrl} target="_blank" rel="noopener noreferrer">CC0</a> · Sample photo, no academy affiliation</>} /></p>
       <div className="program-body"><h3>{program.title}</h3><p>{program.description}</p><div className="program-meta"><span>AGES {program.age}</span><span>{program.level}</span></div><p className="schedule">{program.schedule} · Sample</p><EnquireButton programId={program.id}>Explore your potential</EnquireButton></div>
     </article>; })}</div>
-    <p className="sample-note">{visible.length} of 14 programs · Illustrative program information; confirm eligibility, schedule and availability through an enquiry.</p>
+    <p className="sample-note">{visible.length} of {programs.length} programs · Confirm eligibility, schedule and availability with the academy.</p>
   </>;
 }

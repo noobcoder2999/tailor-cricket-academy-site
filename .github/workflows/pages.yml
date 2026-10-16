@@ -19,9 +19,12 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - run: npm run lint
       - run: npm run build
         env:
           NEXT_TELEMETRY_DISABLED: 1
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:pages
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out

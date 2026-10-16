@@ -1,8 +1,14 @@
 # Tailor Cricket Academy - public scroll edition
 
-**Status:** private repository; GitHub Pages is disabled. Do not re-enable publication without the owner's explicit approval.
+**Website:** https://noobcoder2999.github.io/tailor-cricket-academy-site/
+
+Published with the owner's approval. The public edition is read-only; the local owner editor and enquiry records are not exposed.
 
 This is the read-only GitHub Pages edition of the Tailor Cricket Academy concept website. It retains the coach-photo scroll scene, responsive design, motion controls, programmes, galleries, licensed video, the cricket introduction and batting simulator.
+
+The program section contains exactly nine selected pathways: beginner, advanced, batting, personal coaching, pace bowling, spin bowling, summer camp, high-performance and group coaching. The personal option is titled **Ready for the next level - personal coaching** and keeps the `one-to-one` ID. Old image slots remain readable, but retired programs are not listed.
+
+Jaipur-focused page titles/descriptions and the original guide at `/blog/choosing-cricket-coaching-jaipur/` improve the relevance of the content without claiming a "best" ranking. The journal is linked from the homepage and footer. Public pages permit indexing and have canonical URLs and a sitemap. Rankings and inclusion in search results are not guaranteed. The local edition remains noindex.
 
 ## Public edition boundaries
 
@@ -33,7 +39,7 @@ npm run build
 
 After building, `npm run test:pages` checks the real static files in a browser. Install Playwright Chromium with `npx playwright install chromium` if it is not already available. Set `PAGES_TEST_CHANNEL=msedge` to use an installed Edge browser, or `PAGES_TEST_URL` to check the deployed site instead of the local export.
 
-The production build creates `out/`. The Pages workflow is manually disabled and no longer runs on pushes; a deployment also requires an explicit `ENABLE_PUBLIC_PAGES=true` repository variable. The project path is set in `src/lib/site.ts` and used by `next.config.ts`. `sitePath` and `SiteLink` apply it to assets and navigation. This edition uses ordinary document links so static-host navigation has no server-router dependency.
+The production build creates `out/`. The Pages workflow is manually dispatched; deployment requires `ENABLE_PUBLIC_PAGES=true`. The project path is set in `src/lib/site.ts` and used by `next.config.ts`. `sitePath` and `SiteLink` apply it to assets and navigation. This edition uses ordinary document links so static-host navigation has no server-router dependency.
 
 ## Design and motion
 

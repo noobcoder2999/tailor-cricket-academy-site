@@ -4,7 +4,9 @@ export const academy = {
   name: "Tailor Cricket Academy",
   shortName: "Tailor",
   tagline: "The game shapes you.",
-  description: "Tailor Cricket Academy in Jotdiwala, Sanganer, Jaipur brings together hands-on coaching, purposeful practice and the experience of playing on a match ground. Our focus is helping players build sound skills, confidence and a lasting love for cricket.",
+  searchTitle: "Cricket Coaching in Jaipur | Tailor Cricket Academy",
+  searchDescription: "Explore cricket coaching at Tailor Cricket Academy in Sanganer, Jaipur: beginner training, batting, pace and spin bowling, personal coaching and summer camps.",
+  description: "Tailor Cricket Academy in Jotdiwala, Sanganer, Jaipur brings together cricket coaching for beginners, focused batting and bowling practice, and personal attention for players developing their game. From a first session to advanced training, our approach puts technique, confidence and a lasting love of cricket first.",
   sampleNotice: "Academy profiles and contact details are supplied by the owner. Programs, schedules, results and stories marked as samples remain illustrative.",
   founded: "2012",
   history: "The academy reports that its ground is affiliated with the Rajasthan Cricket Association (RCA) and hosts RCA matches. That match-day setting is part of the cricket culture here, alongside the everyday work of developing batting, bowling and fielding skills. Each session is an opportunity to learn, practise and grow in the game.",
@@ -45,24 +47,19 @@ export type Program = {
 };
 export const programs: Program[] = [
   { id: "beginner", title: "A first love for the game", category: "Foundations", description: "A friendly first step for new players. Learn how to hold the bat, find a balanced stance, throw and catch through simple drills and small-sided games.", age: "6-12", level: "Beginner", schedule: "Tue & Thu, 4-5:30pm", image: images.nets },
-  { id: "intermediate", title: "Build your cricket IQ", category: "Foundations", description: "Turn basic skills into smart decisions. Practise choosing shots, reading field placements, rotating the strike and planning an over in realistic match situations.", age: "10-16", level: "Intermediate", schedule: "Mon, Wed & Fri, 4-6pm", image: images.pavilion },
   { id: "advanced", title: "Ready for the next level", category: "Performance", description: "Advanced player development with individual season plans, match preparation and reviews.", age: "14+", level: "Advanced", schedule: "Mon-Fri, 6-8am", image: images.nets },
   { id: "batting", title: "Own the crease", category: "Specialist", description: "Batting coaching built around balance, timing, shot selection and reading the field.", age: "8+", level: "All levels", schedule: "Tue & Thu, 6-7pm", image: images.equipment },
+  { id: "one-to-one", title: "Ready for the next level - personal coaching", category: "Specialist", description: "Personal cricket coaching built around your goals: focused one-to-one attention, specific batting or bowling feedback, and a practice plan suited to your stage.", age: "8+", level: "All levels", schedule: "By enquiry", image: images.nets },
   { id: "fast-bowling", title: "Pace with purpose", category: "Specialist", description: "Fast bowling coaching: safe run-up mechanics, repeatable actions, seam and workload awareness.", age: "12+", level: "Intermediate+", schedule: "Mon & Wed, 5-7pm", image: images.nets },
   { id: "spin", title: "The art of deception", category: "Specialist", description: "Spin bowling coaching covering revolutions, flight, control, variations and tactical fields.", age: "10+", level: "All levels", schedule: "Tue & Fri, 5-7pm", image: images.equipment },
-  { id: "wicketkeeping", title: "Behind every great spell", category: "Specialist", description: "Wicketkeeping: quiet hands, quick feet, standing up, standing back and communicating.", age: "10+", level: "All levels", schedule: "Wed & Sat, 7-9am", image: images.equipment },
-  { id: "fielding-fitness", title: "Win the small moments", category: "Specialist", description: "Fielding and fitness with catching, throwing, agility and age-appropriate conditioning.", age: "8+", level: "All levels", schedule: "Sat, 7-9am", image: images.pavilion },
-  { id: "one-to-one", title: "Your game. Your plan.", category: "Specialist", description: "One-to-one coaching: focused attention, video feedback and a personal practice plan.", age: "8+", level: "All levels", schedule: "By enquiry", image: images.nets },
-  { id: "group", title: "Better, together", category: "Community", description: "Group coaching for friends and teams, with shared drills and small-sided matches.", age: "8+", level: "All levels", schedule: "Sat & Sun, 9-11am", image: images.pavilion },
   { id: "summer", title: "A summer at the crease", category: "Community", description: "Summer camps combining skills, friendly games and confidence-building team activities.", age: "6-16", level: "Beginner-Intermediate", schedule: "School holidays, 8-11am", image: images.pavilion },
-  { id: "weekend", title: "Make weekends count", category: "Community", description: "Weekend batches with consistent skill progression around school and family life.", age: "6+", level: "All levels", schedule: "Sat & Sun, 7-9am", image: images.nets },
-  { id: "girls", title: "A place to play your way", category: "Community", description: "Girls' cricket program: a supportive pathway from introduction to competitive cricket.", age: "8+", level: "All levels", schedule: "Tue, Thu & Sat, 4-6pm", image: images.pavilion },
-  { id: "high-performance", title: "Leave nothing to chance", category: "Performance", description: "High-performance training integrating technical plans, fitness, match analysis and recovery.", age: "16+", level: "Competitive", schedule: "Mon-Fri, 6-9am", image: images.nets }
+  { id: "high-performance", title: "Leave nothing to chance", category: "Performance", description: "High-performance training integrating technical plans, fitness, match analysis and recovery.", age: "16+", level: "Competitive", schedule: "Mon-Fri, 6-9am", image: images.nets },
+  { id: "group", title: "Better, together", category: "Community", description: "Group coaching for friends and teams, with shared drills and small-sided matches.", age: "8+", level: "All levels", schedule: "Sat & Sun, 9-11am", image: images.pavilion }
 ];
 export const batches = [
-  { id: "morning", label: "Weekday mornings (sample)", programIds: ["advanced", "wicketkeeping", "high-performance", "one-to-one"] },
-  { id: "evening", label: "Weekday evenings (sample)", programIds: ["beginner", "intermediate", "batting", "fast-bowling", "spin", "girls", "one-to-one"] },
-  { id: "weekend", label: "Weekend mornings (sample)", programIds: ["weekend", "group", "fielding-fitness", "wicketkeeping", "girls", "one-to-one"] },
+  { id: "morning", label: "Weekday mornings (sample)", programIds: ["advanced", "high-performance", "one-to-one"] },
+  { id: "evening", label: "Weekday evenings (sample)", programIds: ["beginner", "batting", "fast-bowling", "spin", "one-to-one"] },
+  { id: "weekend", label: "Weekend mornings (sample)", programIds: ["group", "one-to-one"] },
   { id: "holiday", label: "School holiday camp (sample)", programIds: ["summer"] }
 ];
 export const roles = ["Batsman", "Bowler", "All-rounder", "Wicketkeeper", "Exploring"] as const;

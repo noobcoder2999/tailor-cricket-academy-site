@@ -16,7 +16,10 @@ export const photoSlots = [
 ];
 
 export function isPhotoSlot(id: string) {
+  // Keep stored photos from retired programs readable without offering them as new slots.
+  const archived = ["intermediate", "wicketkeeping", "fielding-fitness", "weekend", "girls"];
   return photoSlots.some(slot => slot.id === id) ||
+    archived.some(program => id === `program:${program}`) ||
     /^video-poster:[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/.test(id);
 }
 

@@ -14,13 +14,15 @@ import CoachScrollBackdrop from "../components/CoachScrollBackdrop";
 import PlayerStories from "../components/PlayerStories";
 import Coaches from "../components/Coaches";
 import { TeamProfiles, MeetingMoments } from "../components/OwnerSections";
-import { sitePath } from "../lib/site";
+import { sitePath, siteUrl } from "../lib/site";
 import { publicMedia } from "../lib/public-media";
 import { EditPhotoButton, SiteImage, PhotoCredit } from "../components/MediaEditing";
 import Facilities from "../components/Facilities";
 import AcademyContact from "../components/AcademyContact";
+import CricketJournal from "../components/CricketJournal";
 
 export const dynamic = "force-static";
+export const metadata = { alternates: { canonical: siteUrl } };
 export default async function Home() {
   const mode = "public-preview";
   const media = publicMedia;
@@ -35,7 +37,8 @@ export default async function Home() {
       <section id="about" className="section about-section"><Reveal className="about-copy"><SectionHeading eyebrow="01 / THE TAILOR WAY" title={<>Cricket is the start.<br /><em>Character is the legacy.</em></>} /><p className="lead">{academy.description}</p><p>{academy.history}</p><div className="about-points"><div><h3>Our mission</h3><p>{academy.mission}</p></div><div><h3>Our vision</h3><p>{academy.vision}</p></div></div><details className="editorial-details"><summary>Our philosophy & player development</summary><p>{academy.philosophy}</p><p>Players aged 6-80 are grouped by readiness, experience and training goals. Early sessions prioritise fun and movement; later pathways introduce tactical work and individual reviews. All pathways are illustrative.</p></details><div className="values">{academy.values.map(value => <span key={value}>{value}</span>)}</div></Reveal><div className="about-visual"><div className="about-photo"><SiteImage slotId="about" src={images.nets} alt="Sunlit practice nets at Bayford Cricket Club, used as a sample training setting" fill sizes="(max-width: 800px) 100vw, 45vw" /><EditPhotoButton slotId="about" label="About photo" className="media-edit-overlay" /></div><blockquote><span className="quote-mark">“</span>{academy.founder.message}<cite>{academy.founder.name} <small>Sample founder · fictional identity</small></cite></blockquote><p className="sample-note"><PhotoCredit slotId="about" fallback="Illustrative venue · Acabashi / CC BY-SA 4.0" /></p></div></section>
       <Coaches photos={media.photos.filter(p => p.target === "coach")} />
       <TeamProfiles photos={media.photos.filter(p => p.target === "staff")} editable={editable} />
-      <section id="programs" className="section"><div className="heading-row"><SectionHeading eyebrow="03 / A PATH FOR EVERY PLAYER" title={<>Start where you are.<br /><em>See how far you can go.</em></>} /><p>Fourteen ways to develop your game.<br />One commitment to your potential.</p></div><Programs /></section>
+      <section id="programs" className="section"><div className="heading-row"><SectionHeading eyebrow="03 / CRICKET COACHING IN JAIPUR" title={<>Start where you are.<br /><em>See how far you can go.</em></>} /><p>Nine ways to develop your game.<br />One commitment to your potential.</p></div><Programs /></section>
+      <CricketJournal />
       <section className="coach-interlude" aria-labelledby="coach-interlude-title"><p className="eyebrow">THE WORK BETWEEN THE HIGHLIGHTS</p><h2 id="coach-interlude-title">No shortcuts.<br /><em>Just good cricket.</em></h2><a href="#trial" className="coach-text-link">Take the next step <span aria-hidden="true">↗</span></a></section>
       <section id="facilities" className="section facilities-section"><SectionHeading light eyebrow="04 / THE RIGHT ENVIRONMENT" title={<>Room to practise.<br /><em>Space to dream.</em></>} text="Explore the spaces behind your training. The area cards are ready for the owner's own photographs; amenities remain proposed until confirmed." /><div className="facility-feature"><SiteImage slotId="facilities" src={images.pavilion} alt="Sample clubhouse and green outfield at Walker Cricket Ground" fill sizes="100vw" /><div><span className="eyebrow">THE HEART OF THE CLUB</span><h3>Where every innings<br />feels like home.</h3></div><EditPhotoButton slotId="facilities" label="Facilities ground" className="media-edit-overlay" /></div><Facilities /></section>
       <section id="videos" className="section"><SectionHeading eyebrow="05 / WATCH. UNDERSTAND. IMPROVE." title={<>The game, <em>in focus.</em></>} text="Choose a category, play a lesson or read its transcript. Owner-provided recordings are labeled; remaining sample clips are licensed archival examples, not academy lessons." /><VideoLibrary /></section>

@@ -49,7 +49,11 @@ try {
   await page.goto(url, { waitUntil: "domcontentloaded", timeout: 90000 });
   await page.waitForSelector('.coach-scroll-backdrop[data-scroll-ready="true"]');
   assert.match(await page.title(), /Tailor Cricket Academy/);
+  assert.match(await page.locator('meta[name="robots"]').getAttribute("content"), /^index, follow/);
   assert.equal(await page.locator(".media-edit-button, .media-admin-bar, form").count(), 0);
+  assert.equal(await page.locator(".program-card").count(), 9);
+  const personalTitle = "Ready for the next level - personal coaching";
+  await page.getByRole("heading", { name: personalTitle, exact: true }).waitFor();
   const approved = JSON.parse(await readFile(path.resolve(import.meta.dirname, "..", "src", "content", "published-media.json"), "utf8"));
   for (const photo of approved.photos.filter(photo => photo.target === "coach")) {
     const profile = page.locator("#coaches article").filter({ has: page.getByRole("heading", { name: photo.name, exact: true }) }).filter({ hasText: photo.role });
@@ -81,7 +85,7 @@ try {
   await page.locator("#home").getByRole("button", { name: "Enter the crease", exact: false }).click();
   assert.equal(new URL(page.url()).pathname, `${basePath}/`);
   await page.getByRole("button", { name: "Skip intro" }).click();
-  for (const route of ["privacy", "terms", "credits", "editor", "simulator"]) {
+  for (const route of ["privacy", "terms", "credits", "editor", "blog/choosing-cricket-coaching-jaipur", "simulator"]) {
     const response = await page.goto(`${url}${route}/`, { waitUntil: "domcontentloaded" });
     assert.equal(response.status(), 200, route);
     await page.getByRole("heading", { level: 1 }).waitFor();
@@ -92,6 +96,11 @@ try {
   assert.equal(new URL(page.url()).pathname, `${basePath}/`);
   await page.getByRole("button", { name: "Skip intro" }).click();
   await page.goto(url);
+  await page.locator("#journal").getByRole("link", { name: "Read the guide" }).click();
+  await page.getByRole("heading", { name: "Choosing cricket coaching in Jaipur: a player's guide", exact: true }).waitFor();
+  assert.equal(new URL(page.url()).pathname.replace(/\/$/, ""), `${basePath}/blog/choosing-cricket-coaching-jaipur`);
+  await page.getByRole("link", { name: "Explore programs", exact: true }).click();
+  await page.locator(".program-card").first().waitFor();
   for (const width of [320, 390, 768, 1440]) {
     await page.setViewportSize({ width, height: 900 });
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth), width);

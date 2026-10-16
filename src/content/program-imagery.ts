@@ -3,18 +3,13 @@ import { sitePath } from "../lib/site";
 
 const selections: Record<string, keyof typeof photos> = {
   beginner: "youth-practice",
-  intermediate: "training",
   advanced: "women-2716",
   batting: "indoor",
   "fast-bowling": "women-2796",
   spin: "women-2785",
-  wicketkeeping: "women-2785",
-  "fielding-fitness": "women-2824",
   "one-to-one": "training",
   group: "women-2856",
   summer: "youth-practice",
-  weekend: "club-practice",
-  girls: "women-2910",
   "high-performance": "women-2659"
 };
 const descriptions: Partial<Record<keyof typeof photos, string>> = {
